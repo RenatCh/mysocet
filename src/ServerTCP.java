@@ -15,7 +15,7 @@ public class ServerTCP {
 
     }
    public static void run() throws IOException {
-        ss = new ServerSocket(9885);
+        ss = new ServerSocket(9890);
         serverThread = Thread.currentThread();
 //       try {
 //           ss = new ServerSocket(port);
