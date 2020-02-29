@@ -15,7 +15,7 @@ public class ServerTCP {
 
     }
    public static void run() throws IOException {
-        ss = new ServerSocket(9892);
+        ss = new ServerSocket(9896);
         serverThread = Thread.currentThread();
 //       try {
 //           ss = new ServerSocket(port);
@@ -84,7 +84,7 @@ public class ServerTCP {
                 } else if ("shutdown".equals(line)) {
                     serverThread.interrupt();
                     try {
-                        new Socket("localhost", 9884);
+                        new Socket("localhost", 9896);
 
                     } catch (IOException ignored) {
                     } finally {
@@ -94,7 +94,7 @@ public class ServerTCP {
                     String hi = "HIHIHIHIH";
                     for (SocketProcessor sp:q) {
 
-                        sp.send(hi);
+                        sp.send(line);
                     }
                 }
             }
